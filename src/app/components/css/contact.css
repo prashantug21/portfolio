@@ -1,0 +1,14 @@
+input,textarea{
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid grey;
+    width: 100%;
+}
+input:focus,textarea:focus{
+    border-bottom: 2px solid #6C1BF0;
+}
+#loaderbg{
+    display: none;
+}
+

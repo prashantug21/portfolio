@@ -1,0 +1,34 @@
+#icon{
+    font-size: 30px;
+}
+svg{
+    fill: rgb(252, 252, 252);
+    width: 2.5rem;
+    border: 0;
+    margin: 0rem 0;
+}
+svg:hover{
+    fill: #28e98c;
+    cursor: pointer;
+}
+#floatbar{
+    position: fixed;
+    top: 25vh;
+    right: 5px;
+    z-index: 100;
+    padding:2rem 0rem;
+    opacity: 1;
+    animation: rightside 1s ease-in-out;
+}
+@keyframes rightside{
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }    
+}
+
+@media screen and (min-width:900px) {
+    #floatbar{
+        right: 3rem;
+    }
+}

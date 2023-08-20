@@ -1,0 +1,24 @@
+.skill-item img{
+    opacity:1;
+}
+.skill-item{
+    border: 2px solid gray;
+    transition: transform 0.1s;
+}
+.skill-item:hover{
+    transform: scale(1.15);
+}
+svg{
+    margin: 0;
+}
+.heading:hover svg, .heading:hover{
+    color: #28e98c;
+    fill: #28e98c;
+    border-color: #28e98c;
+}
+.skill-item:nth-child(odd){
+    animation: leftside 1s ease-in-out;
+}
+.skill-item:nth-child(even){
+    animation: rightside 1s ease-in-out;
+}

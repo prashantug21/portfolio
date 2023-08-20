@@ -18,7 +18,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: var(--background-start-rgb);
-  padding: 1rem;
+  padding:1rem ;
   font-family:'Tektur',cursive;
 }
 #icon{
@@ -30,10 +30,4 @@ svg{
 }
 html{
   height: 100vh;
-}
-@media screen and (min-width:350px) {
-  body{
-    padding: 3rem 3rem;
-  }
-  
 }

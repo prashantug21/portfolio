@@ -43,8 +43,6 @@
     height: 101%;
     left: 50%;
     transform: translate(-50%,-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
 }
 #project_link:hover{
     opacity: 1;
@@ -82,11 +80,4 @@
 #techs:hover{
   color: #cbcbcb;
   background-color: #393535;
-}
-
-.project div:nth-child(odd){
-  animation: leftside 1s ease-in-out;
-}
-.project div:nth-child(even){
-  animation: rightside 1s ease-in-out;
 }

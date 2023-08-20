@@ -16,9 +16,3 @@ svg{
     fill: #28e98c;
     border-color: #28e98c;
 }
-.skill-item:nth-child(odd){
-    animation: leftside 1s ease-in-out;
-}
-.skill-item:nth-child(even){
-    animation: rightside 1s ease-in-out;
-}

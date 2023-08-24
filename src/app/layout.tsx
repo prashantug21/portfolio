@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Electrolize } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter =Electrolize({subsets: ['latin'],weight: ['400'],display:'swap'})
 
 export const metadata: Metadata = {
   title: 'Prashant Portfolio',

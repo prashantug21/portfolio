@@ -5,6 +5,7 @@ interface Project {
   projectName: string;
   imgLink: StaticImageData;
   technologies: string[];
+  siteLink:string;
   repoLink: string;
 }
 
@@ -12,6 +13,7 @@ const ProjectCard: React.FC<Project> = ({
   projectName,
   imgLink,
   technologies,
+  siteLink,
   repoLink,
 }) => {
   return (
@@ -36,7 +38,7 @@ const ProjectCard: React.FC<Project> = ({
               </div>
             </div>
           </div>
-          <div className="text-2xl md:text-4xl font-bold"><a href="https://campusconnect1.netlify.app/" target="_blank">{projectName}</a></div>
+          <div className="text-2xl md:text-4xl font-bold hover:text-purple-700"><a href={siteLink} target="_blank">{projectName}</a></div>
           <div className="flex flex-col md:flex-row gap-2">
             <div className="text-xl font-semibold">Technologies:</div>
             <div className="flex flex-row gap-2">

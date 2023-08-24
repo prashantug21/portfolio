@@ -12,6 +12,7 @@ const Project:React.FC=()=> {
     projectName: string;
     imgLink: StaticImageData;
     technologies: string[];
+    siteLink: string;
     repoLink: string;
   }
   const project:Project[]= [
@@ -25,26 +26,28 @@ const Project:React.FC=()=> {
         "CSS",
         "EXPRESS.JS",
         "Javascript",
-        "MONGO.DB",
-        "BOOTSTRAP"
-        
+        "MONGO.DB", 
       ],
+      siteLink:"https://campusconnect1.netlify.app/",
       repoLink: "https://github.com/prashantug21/CampusConnectClient",
     },{
       projectName:"TODO List",
       imgLink:todoimg,
       technologies:["HTML","CSS","Javascript"],
+      siteLink:"https://prashantug21.github.io/Task3/",
       repoLink:"https://github.com/prashantug21/Task3",
 
     },{
       projectName:"Calculator",
       imgLink:calulatorimg,
       technologies:["HTML","CSS","Javascript"],
+      siteLink:"https://prashantug21.github.io/Task1/",
       repoLink:"https://github.com/prashantug21/Task1"
     },{
       projectName:"Portfolio",
       imgLink:portfolioimg,
-      technologies:["NEXT.JS","HTML","Tailwind.CSS","Javascript"],
+      technologies:["NEXT.JS","HTML","Tailwind.CSS","Javascript","CSS"],
+      siteLink:"https://prashanty.vercel.app/",
       repoLink:"https://github.com/prashantug21/portfolio"
     }
   ];

@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -13,13 +12,10 @@
   scroll-behavior: smooth;
   
 }
-
-
 body {
   color: rgb(var(--foreground-rgb));
   background: var(--background-start-rgb);
   padding:1rem ;
-  font-family:'Tektur',cursive;
 }
 #icon{
   font-size: 40px;

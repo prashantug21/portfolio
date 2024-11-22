@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import github from "../svg/github.svg";
-import linkedin from "../svg/linkedin.svg";
-import profile from "../images/profile-pic.png";
+const github = "/svg/github.svg";
+const linkedin = "/svg/linkedin.svg";
+const profile = "/images/profile-pic.png";
 import "../css/intro.css";
 import { link } from "fs";
 
@@ -20,7 +20,9 @@ export default function Intro() {
               src={linkedin}
               alt="linkedin"
               id="linkedin"
+              width={23} height={23}
               className="relative z-10"
+              
             />
           </a>
           <a
@@ -32,6 +34,7 @@ export default function Intro() {
               src={github}
               alt="github"
               id="github"
+              width={23} height={23}
               className="relative z-10"
             />
           </a>
@@ -44,7 +47,7 @@ export default function Intro() {
           <br /> <span id="name">Prashant Yadav</span>
         </div>
         <div className="profile">
-          <Image src={profile} alt="profile"  />
+          <Image src={profile} alt="profile" id="profile" width={300} height={300} />
         </div>
       </div>
       <div className=" text-gray-200 text-xl" id="oneline">

@@ -48,7 +48,7 @@
 }
 #project_link:hover{
     opacity: 1;
-    background-color: rgba(40, 37, 37, 0.9) ;
+    background-color: #282525e6 ;
 }
 #project_link a{
     color: #ffffff;

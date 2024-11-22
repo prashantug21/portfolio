@@ -3,9 +3,9 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 interface Project {
   projectName: string;
-  imgLink: StaticImageData;
+  imgLink: string;
   technologies: string[];
-  siteLink:string;
+  siteLink: string;
   repoLink: string;
 }
 
@@ -26,6 +26,8 @@ const ProjectCard: React.FC<Project> = ({
               alt="campus"
               className="opacity-100"
               id="project_image"
+              width={850}
+              height={400}
             />
             <div
               className="flex flex-row justify-center items-center gap-2"
@@ -45,7 +47,7 @@ const ProjectCard: React.FC<Project> = ({
               <p className="leading-9">
                 {technologies?.map((tech: string, index: number) => (
                   <span className=" text-xl font-medium cursor-default" id="techs" key={index}>
-                    {tech+` `}
+                    {tech + ` `}
                   </span>
                 ))}</p>
             </div>

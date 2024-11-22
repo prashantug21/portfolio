@@ -1,16 +1,57 @@
 import React from "react";
 import Image from "next/image";
-import html from "../svg/html-5-svgrepo-com.svg";
-import css from "../svg/css-3-svgrepo-com.svg";
-import js from "../svg/javascript.svg";
-import react from "../svg/react.svg";
-import node from "../svg/node.svg";
-import mongo from "../svg/mongodb.svg";
-import bootstrap from "../svg/bootstrap.svg";
-import express from "../svg/express-js-icon-12.svg";
+const html = "/svg/html-5-svgrepo-com.svg";
+const css = "/svg/css-3-svgrepo-com.svg";
+const js = "/svg/javascript.svg";
+const react = "/svg/react.svg";
+const node = "/svg/node.svg";
+const mongo = "/svg/mongodb.svg";
+const bootstrap = "/svg/bootstrap.svg";
+const express = "/svg/express-js-icon-12.svg";
+const postgresql="/svg/postgresql.svg"
+const tailwind="/svg/tailwindcss.svg"
+const nextjs="/svg/nextjs.svg"
+const docker="/svg/docker.svg"
 import "../css/skill.css";
 
 export default function Skill() {
+  const skills = [{
+    name: "HTML",
+    img: html
+  }, {
+    name: "CSS",
+    img: css
+  }, {
+    name: "Javascript",
+    img: js
+  }, {
+    name: "React",
+    img: react
+  }, {
+    name: "Node",
+    img: node
+  }, {
+    name: "MongoDB",
+    img: mongo
+  }, {
+    name: "Bootstrap",
+    img: bootstrap
+  }, {
+    name: "Express",
+    img: express
+  },{
+    name: "PostgreSQL",
+    img:postgresql
+  },{
+    name: "TailwindCSS",
+    img:tailwind
+  },{
+    name:"NextJS",
+    img:nextjs
+  },{
+    name:"Docker",
+    img:docker
+  }]
   return (
     <div>
       <div
@@ -31,77 +72,15 @@ export default function Skill() {
           My <span className=" text-green-600">Advantages</span>
         </div>
         <div className="skill grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 justify-evenly place-items-center lg:mx-20 xl:mx-36">
-          <div className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
+          {skills.map((skill, index) => <div key={index} className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
             <Image
-              src={html}
+              src={skill.img}
               alt="html"
               className="opacity-1 my-5 w-20 sm:w-40"
-              width={23}
+              width={23} height={23}
             />
-            <div className="sm:text-3xl  mb-4 text-center">HTML</div>
-          </div>
-          <div className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
-            <Image
-              src={css}
-              alt="css"
-              className="opacity-1 my-5 w-20 sm:w-40"
-              width={23}
-            />
-            <div className="sm:text-3xl mb-4 text-center">CSS</div>
-          </div>
-          <div className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
-            <Image
-              src={js}
-              alt="javascript"
-              className="opacity-1 my-5 w-20 sm:w-40"
-              width={45}
-            />
-            <div className="sm:text-3xl mb-4 text-center">Javascript</div>
-          </div>
-          <div className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
-            <Image
-              src={bootstrap}
-              alt="bootstrap"
-              className="opacity-1 my-5 w-20 sm:w-40"
-              width={23}
-            />
-            <div className="sm:text-3xl  mb-4 text-center">Bootstrap</div>
-          </div>
-          <div className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
-            <Image
-              src={node}
-              alt="Node"
-              className="opacity-1 my-5 w-20 sm:w-40"
-            />
-            <div className="sm:text-3xl mb-4 text-center">Node</div>
-          </div>
-          <div className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
-            <Image
-              src={react}
-              alt="React"
-              className="opacity-1 my-5 w-20 sm:w-40"
-              width={23}
-            />
-            <div className="sm:text-3xl mb-4 text-center">React</div>
-          </div>
-          <div className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
-            <Image
-              src={mongo}
-              alt="MongoDB"
-              className="opacity-1 my-5 w-20 sm:w-40"
-              width={23}
-            />
-            <div className="sm:text-3xl mb-4 text-center">MongoDB</div>
-          </div>
-          <div className="skill-item hover:scale-110 transition-transform w-32 sm:w-40 xl:w-52 flex-col gap-5 justify-evenly items-center flex sm:p-7 rounded-full">
-            <Image
-              src={express}
-              alt="Express"
-              className="opacity-1 my-5 w-20 sm:w-40"
-              width={23}
-            />
-            <div className="sm:text-3xl mb-4 text-center">Express</div>
-          </div>
+            <div className="sm:text-3xl  mb-4 text-center">{skill.name}</div>
+          </div>)}
         </div>
         <hr className=" mt-20" />
       </div>

@@ -6,7 +6,7 @@ import Contact from './components/tsx/Contact'
 
 export default function Home() {
   return (
-    <div>
+    <div className=''>
       <Intro/>
       <Floatbar />
       <Skill/>

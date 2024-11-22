@@ -2,8 +2,8 @@
 import Image from "next/image";
 import "../css/contact.css";
 import React, { ChangeEvent } from "react";
-import linkedin from "../svg/linkedin.svg";
-import github from "../svg/github.svg";
+const linkedin = "/svg/linkedin.svg";
+const github = "/svg/github.svg";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,8 +12,8 @@ import { HashLoader } from "react-spinners";
 
 export default function Contact() {
   const override: CSSProperties = {
-    position:'relative',
-    top:'50%',
+    position: 'relative',
+    top: '50%',
     display: "block",
     margin: "0 auto",
     borderColor: "red",
@@ -72,7 +72,7 @@ export default function Contact() {
       setLoading(true)
       const load = document.getElementById("loaderbg");
       if (load) {
-        load.style.display = "block"; 
+        load.style.display = "block";
       }
 
       const response = await fetch("/api/sendEmail", {
@@ -104,7 +104,7 @@ export default function Contact() {
       }
       setLoading(false)
       if (load) {
-        load.style.display = "none"; 
+        load.style.display = "none";
       }
     }
   };
@@ -228,6 +228,7 @@ export default function Contact() {
               src={linkedin}
               alt="linkedin"
               id="linkedin"
+              width={23} height={23}
               className="relative z-10"
             />
           </a>
@@ -240,6 +241,7 @@ export default function Contact() {
               src={github}
               alt="github"
               id="github"
+              width={23} height={23}
               className="relative z-10"
             />
           </a>

@@ -2,20 +2,20 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import "../css/project.css";
 import { StaticImageData } from "next/image";
-import campusimg from '../images/campus_connect.png'
-import todoimg from '../images/Todo.png'
-import calulatorimg from '../images/calculator.png'
-import portfolioimg from '../images/portfolio.png'
+const campusimg = '/images/campus_connect.png'
+const portfolioimg = '/images/portfolio.png'
+const coderbaseimg = '/images/coderbasehub.png'
+const cosdataimg = '/images/cosdata.png'
 
-const Project:React.FC=()=> {
-  interface Project{
+const Project: React.FC = () => {
+  interface Project {
     projectName: string;
-    imgLink: StaticImageData;
+    imgLink: string;
     technologies: string[];
     siteLink: string;
     repoLink: string;
   }
-  const project:Project[]= [
+  const project: Project[] = [
     {
       projectName: "Campus Connect",
       imgLink: campusimg,
@@ -26,29 +26,28 @@ const Project:React.FC=()=> {
         "CSS",
         "EXPRESS.JS",
         "Javascript",
-        "MONGO.DB", 
+        "MONGO.DB",
       ],
-      siteLink:"https://campusconnect1.netlify.app/",
+      siteLink: "https://campusconnect1.netlify.app/",
       repoLink: "https://github.com/prashantug21/CampusConnectClient",
-    },{
-      projectName:"TODO List",
-      imgLink:todoimg,
-      technologies:["HTML","CSS","Javascript"],
-      siteLink:"https://prashantug21.github.io/Task3/",
-      repoLink:"https://github.com/prashantug21/Task3",
-
-    },{
-      projectName:"Calculator",
-      imgLink:calulatorimg,
-      technologies:["HTML","CSS","Javascript"],
-      siteLink:"https://prashantug21.github.io/Task1/",
-      repoLink:"https://github.com/prashantug21/Task1"
-    },{
-      projectName:"Portfolio",
-      imgLink:portfolioimg,
-      technologies:["NEXT.JS","HTML","Tailwind.CSS","Javascript","CSS"],
-      siteLink:"https://prashanty.vercel.app/",
-      repoLink:"https://github.com/prashantug21/portfolio"
+    }, {
+      projectName: "Portfolio",
+      imgLink: portfolioimg,
+      technologies: ["NEXT.JS", "HTML", "Tailwind.CSS", "Javascript", "CSS"],
+      siteLink: "https://prashanty.vercel.app/",
+      repoLink: "https://github.com/prashantug21/portfolio"
+    }, {
+      projectName: "CoderBase Hub",
+      imgLink: coderbaseimg,
+      technologies: ["NEXT.JS", "HTML", "Tailwind.CSS", "TypeScript", "CSS", "POSTGRESQL"],
+      siteLink: "https://coder-base-hub.vercel.app/",
+      repoLink: "https://github.com/prashantug21/CoderBase-Hub"
+    }, {
+      projectName: "Cosdata",
+      imgLink: cosdataimg,
+      technologies: ["NEXT.JS", "HTML", "Tailwind.CSS", "Javascript", "CSS"],
+      siteLink: "https://www.cosdata.io/",
+      repoLink: "#"
     }
   ];
   return (
@@ -63,7 +62,7 @@ const Project:React.FC=()=> {
         <span className="text-3xl">Projects</span>
       </div>
       <div className="flex flex-col gap-0 max-w-4xl m-auto" id="projCont">
-        {project.map((project:Project,index:number)=>(<ProjectCard key={index}{...project}/>))}
+        {project.map((project: Project, index: number) => (<ProjectCard key={index}{...project} />))}
       </div>
       <hr className=" mt-20" />
     </div>
